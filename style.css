@@ -1,0 +1,235 @@
+:root {
+    --spacer: 1rem;
+    --clr-neutral-900: #171717;
+    --clr-neutral-700: #333;
+    --clr-neutral-300: #cfcfcf;
+    --clr-neutral-100: #fff;
+    --clr-accent-400: #59e89c;
+    --clr-accent-500: #00986a;
+
+    --ff-primary: "PT Sans", sans-serif;
+
+    --fw-700: 700;
+    --fw-400: 400;
+
+    --box-shadow: 0 0.25em 1.5em rgba(0, 0, 0, 0.15);
+}
+    /* RESET */
+
+    *, 
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    } 
+
+
+    h1,
+    h2,
+    h3,
+    p {
+        margin: 0;
+    }
+
+
+    ul,
+    ol {
+        list-style: none;
+        padding: 0;
+        
+    }
+
+    a {
+        text-decoration: none;
+    }
+    
+
+    img {
+        max-width: 100%;
+        display: block;
+        height: auto;
+    }
+
+    /* Navigation */
+
+    header {
+        padding: var(--spacer) 0;
+    }
+
+    @media (min-width: 40em) {
+        header {
+            position: sticky;
+            z-index: 1000;
+            top: 0;
+        }
+    }
+
+    .nav-list {
+        display: flex;
+        justify-content: center;
+        gap: 2em;
+    }
+
+    .nav-list a {
+        font-size: 1rem;
+        color: var(--clr-neutral-100);
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        text-decoration: none;
+    }
+
+    .nav-list :hover {
+        color: var(--clr-accent-400);
+    }
+
+
+    /* Utility Classes */
+
+    .flow-content > * + * {
+       margin-top: var(--flow-space, var(--spacer));
+      
+    }
+
+    .flow-content--large {
+        --flow-space: 3rem;
+    }
+
+    .container {
+        max-width: 70rem;
+        padding: 0 var(--spacer);
+        margin: 0 auto;
+    }
+
+    .bg-dark {
+        /* --flow-space: 1.50rem; */
+        color: var(--clr-neutral-100);
+        background: var(--clr-neutral-900);
+    }
+    .text-accent {
+        color: var(--clr-accent-400)
+    }
+
+    /* GENERAL STYLING */
+
+    body {
+        font-family: var(--ff-primary);
+        font-size: 1.25rem;
+        font-weight: 400;
+        color: var(--clr-neutral-900);
+        margin: 0;
+    }
+
+    section {
+        padding: 4rem 0;
+    }
+
+
+    @media (min-width: 40em) {
+        section {
+            padding: 8rem 0;
+        }
+        
+    } 
+
+h1 {
+    font-weight: 400;
+}
+
+h1 span {
+    font-weight: 700;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.01rem;
+    font-weight:700;
+    font-size: 1.125rem;
+    color: inherit;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--clr-accent-400);
+    color: var(var(--clr-neutral-900));
+}
+
+.split {
+    display: flex;
+    flex-direction: column;
+}
+
+.split > * + * {
+    margin: calc(var(--spacer) * 3) 0 0 0;
+}
+
+@media screen and (min-width: 40em) {
+    .split {
+        flex-direction: row;
+    }
+
+    .split > * + * {
+        margin: 0 0 0 var(--spacer);
+    }
+}
+
+/* Individuals Sections */
+
+.cta {
+    background-image: url(../Lesson-58__Magic_Website/assets/cta-bg.jpg);
+    background-size: cover;
+    text-align: center;
+}
+
+.shadow {
+    box-shadow: var(--box-shadow);
+}
+
+/* .join-now li::before {
+    content: '';
+    background: var(--clr-accent-400);
+    display: block;
+    width: 5rem;
+    height: 5rem;
+    transform: translate(-10%, 60%);
+    z-index: -1;
+    position: absolute;
+} */
+
+.join-now li::before {
+    content: '';
+    background: var(--clr-accent-400);
+    display: block;
+    width: 5rem;
+    height: 5rem;
+    transform: translate(-.5rem, -.5rem);
+    z-index: -1;
+    position: absolute;
+}
+
+/* .join-now li::before {
+    content: '';
+    background: var(--clr-accent-400);
+    display: block;
+    width: 5rem;
+    height: 5rem;
+    transform: translate(3rem, -.5rem);
+    z-index: -1;
+    position: absolute;
+} */
+
+
+/* .bg-dark {
+    position: relative;
+    z-index: 0;
+}
+
+
+.bg-dark li::before {
+    content: '';
+    background: var(--clr-accent-400);
+    display: block;
+    width: 5rem;
+    height: 5rem;
+    transform: translate(-.5rem, -.5rem);
+    z-index: -1;
+    position: absolute;
+} */
+
